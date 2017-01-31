@@ -26,4 +26,7 @@ int main(void)
 			ll = list_add(ll, intp(j));
 		l = list_add(l, ll);
 	}
+
+	list_foreach(l->data, free_list_data);
+	list_foreach(l, free_list_data);
 }
